@@ -141,8 +141,7 @@ namespace CamadaApresentacao
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            this.Top = 200;
-            this.Left = 350;
+            this.Top = 100;
             this.Mostrar();
             this.Habilitar(false);
             this.botoes();
@@ -202,7 +201,7 @@ namespace CamadaApresentacao
                 {
                     if (this.eNovo)
                     {
-                        resp = NCliente.Inserir(this.txtNome.Text.Trim().ToUpper(), 
+                        resp = NCliente.Inserir(this.txtNome.Text.Trim(), 
                             this.txtSobrenome.Text, this.cbSexo.Text, this.dtData.Value, 
                             this.cbTipoDoc.Text, this.txtNumeroDoc.Text, 
                             this.txtEndereco.Text, this.txtTelefone.Text, 

@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuPrincipal));
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.labelPermissao = new System.Windows.Forms.Label();
             this.btnMaximinizar = new System.Windows.Forms.PictureBox();
-            this.labelUsuarioLogado = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.labelAcesso = new System.Windows.Forms.Label();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
-            this.labelNome = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.labelPermissao = new System.Windows.Forms.Label();
+            this.labelUsuarioLogado = new System.Windows.Forms.Label();
+            this.labelAcesso = new System.Windows.Forms.Label();
+            this.labelNome = new System.Windows.Forms.Label();
             this.subMenuProdutos = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -80,11 +80,18 @@
             this.btnBeckupBd = new System.Windows.Forms.Button();
             this.SubMenuFerramentas = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.btnsairInferior = new System.Windows.Forms.PictureBox();
-            this.btnCaixa = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblHora = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbAcesso = new System.Windows.Forms.Label();
+            this.lbNome = new System.Windows.Forms.Label();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnsairInferior = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximinizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -98,6 +105,8 @@
             this.SubMenuConfiguracoes.SuspendLayout();
             this.SubMenuConsultas.SuspendLayout();
             this.SubMenuFerramentas.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnsairInferior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -115,18 +124,6 @@
             this.BarraTitulo.Size = new System.Drawing.Size(1251, 38);
             this.BarraTitulo.TabIndex = 5;
             // 
-            // labelPermissao
-            // 
-            this.labelPermissao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelPermissao.AutoSize = true;
-            this.labelPermissao.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPermissao.ForeColor = System.Drawing.Color.White;
-            this.labelPermissao.Location = new System.Drawing.Point(909, 762);
-            this.labelPermissao.Name = "labelPermissao";
-            this.labelPermissao.Size = new System.Drawing.Size(77, 17);
-            this.labelPermissao.TabIndex = 35;
-            this.labelPermissao.Text = "Permissão :";
-            // 
             // btnMaximinizar
             // 
             this.btnMaximinizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -141,18 +138,6 @@
             this.btnMaximinizar.Visible = false;
             this.btnMaximinizar.Click += new System.EventHandler(this.btnMaximinizar_Click);
             // 
-            // labelUsuarioLogado
-            // 
-            this.labelUsuarioLogado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelUsuarioLogado.AutoSize = true;
-            this.labelUsuarioLogado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsuarioLogado.ForeColor = System.Drawing.Color.White;
-            this.labelUsuarioLogado.Location = new System.Drawing.Point(671, 762);
-            this.labelUsuarioLogado.Name = "labelUsuarioLogado";
-            this.labelUsuarioLogado.Size = new System.Drawing.Size(110, 17);
-            this.labelUsuarioLogado.TabIndex = 34;
-            this.labelUsuarioLogado.Text = "Usuário Logado :";
-            // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -166,18 +151,6 @@
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
-            // labelAcesso
-            // 
-            this.labelAcesso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelAcesso.AutoSize = true;
-            this.labelAcesso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAcesso.ForeColor = System.Drawing.Color.White;
-            this.labelAcesso.Location = new System.Drawing.Point(982, 759);
-            this.labelAcesso.Name = "labelAcesso";
-            this.labelAcesso.Size = new System.Drawing.Size(57, 21);
-            this.labelAcesso.TabIndex = 33;
-            this.labelAcesso.Text = "label1";
-            // 
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -189,18 +162,6 @@
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaximizar.TabIndex = 1;
             this.btnMaximizar.TabStop = false;
-            // 
-            // labelNome
-            // 
-            this.labelNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNome.AutoSize = true;
-            this.labelNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNome.ForeColor = System.Drawing.Color.White;
-            this.labelNome.Location = new System.Drawing.Point(778, 759);
-            this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(57, 21);
-            this.labelNome.TabIndex = 32;
-            this.labelNome.Text = "label1";
             // 
             // btnFechar
             // 
@@ -215,6 +176,54 @@
             this.btnFechar.TabStop = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // labelPermissao
+            // 
+            this.labelPermissao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPermissao.AutoSize = true;
+            this.labelPermissao.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPermissao.ForeColor = System.Drawing.Color.White;
+            this.labelPermissao.Location = new System.Drawing.Point(909, 835);
+            this.labelPermissao.Name = "labelPermissao";
+            this.labelPermissao.Size = new System.Drawing.Size(77, 17);
+            this.labelPermissao.TabIndex = 35;
+            this.labelPermissao.Text = "Permissão :";
+            // 
+            // labelUsuarioLogado
+            // 
+            this.labelUsuarioLogado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelUsuarioLogado.AutoSize = true;
+            this.labelUsuarioLogado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsuarioLogado.ForeColor = System.Drawing.Color.White;
+            this.labelUsuarioLogado.Location = new System.Drawing.Point(671, 835);
+            this.labelUsuarioLogado.Name = "labelUsuarioLogado";
+            this.labelUsuarioLogado.Size = new System.Drawing.Size(110, 17);
+            this.labelUsuarioLogado.TabIndex = 34;
+            this.labelUsuarioLogado.Text = "Usuário Logado :";
+            // 
+            // labelAcesso
+            // 
+            this.labelAcesso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAcesso.AutoSize = true;
+            this.labelAcesso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAcesso.ForeColor = System.Drawing.Color.White;
+            this.labelAcesso.Location = new System.Drawing.Point(982, 832);
+            this.labelAcesso.Name = "labelAcesso";
+            this.labelAcesso.Size = new System.Drawing.Size(57, 21);
+            this.labelAcesso.TabIndex = 33;
+            this.labelAcesso.Text = "label1";
+            // 
+            // labelNome
+            // 
+            this.labelNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNome.AutoSize = true;
+            this.labelNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNome.ForeColor = System.Drawing.Color.White;
+            this.labelNome.Location = new System.Drawing.Point(778, 832);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(57, 21);
+            this.labelNome.TabIndex = 32;
+            this.labelNome.Text = "label1";
+            // 
             // subMenuProdutos
             // 
             this.subMenuProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(90)))));
@@ -224,7 +233,7 @@
             this.subMenuProdutos.Controls.Add(this.btnCategorias);
             this.subMenuProdutos.Controls.Add(this.panel8);
             this.subMenuProdutos.Controls.Add(this.btnCadastroProduto);
-            this.subMenuProdutos.Location = new System.Drawing.Point(53, 78);
+            this.subMenuProdutos.Location = new System.Drawing.Point(54, 86);
             this.subMenuProdutos.Name = "subMenuProdutos";
             this.subMenuProdutos.Size = new System.Drawing.Size(126, 100);
             this.subMenuProdutos.TabIndex = 16;
@@ -309,7 +318,7 @@
             this.btnCadastroProduto.Text = "Cadastro";
             this.btnCadastroProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastroProduto.UseVisualStyleBackColor = false;
-            this.btnCadastroProduto.Click += new System.EventHandler(this.btnCadastroProduto_Click_1);
+            this.btnCadastroProduto.Click += new System.EventHandler(this.btnCadastroProduto_Click);
             // 
             // panel1
             // 
@@ -323,7 +332,7 @@
             this.panel1.Controls.Add(this.btnProdutos);
             this.panel1.Controls.Add(this.btnVendas);
             this.panel1.Controls.Add(this.btnCompras);
-            this.panel1.Location = new System.Drawing.Point(0, 37);
+            this.panel1.Location = new System.Drawing.Point(0, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1251, 39);
             this.panel1.TabIndex = 18;
@@ -340,7 +349,7 @@
             this.btnFerramentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFerramentas.Location = new System.Drawing.Point(632, 3);
             this.btnFerramentas.Name = "btnFerramentas";
-            this.btnFerramentas.Size = new System.Drawing.Size(206, 36);
+            this.btnFerramentas.Size = new System.Drawing.Size(189, 36);
             this.btnFerramentas.TabIndex = 32;
             this.btnFerramentas.Text = "Ferramentas";
             this.btnFerramentas.UseVisualStyleBackColor = false;
@@ -361,7 +370,6 @@
             this.btnConsultas.Size = new System.Drawing.Size(137, 35);
             this.btnConsultas.TabIndex = 31;
             this.btnConsultas.Text = "Consultas";
-            this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConsultas.UseVisualStyleBackColor = false;
             this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
             // 
@@ -375,7 +383,7 @@
             this.btnConfiguracoes.ForeColor = System.Drawing.Color.White;
             this.btnConfiguracoes.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracoes.Image")));
             this.btnConfiguracoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracoes.Location = new System.Drawing.Point(838, 3);
+            this.btnConfiguracoes.Location = new System.Drawing.Point(827, 3);
             this.btnConfiguracoes.Name = "btnConfiguracoes";
             this.btnConfiguracoes.Size = new System.Drawing.Size(217, 36);
             this.btnConfiguracoes.TabIndex = 30;
@@ -398,7 +406,6 @@
             this.btnSistema.Size = new System.Drawing.Size(163, 36);
             this.btnSistema.TabIndex = 29;
             this.btnSistema.Text = "Sistema";
-            this.btnSistema.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSistema.UseVisualStyleBackColor = false;
             this.btnSistema.Click += new System.EventHandler(this.btnSistema_Click);
             // 
@@ -471,7 +478,7 @@
             this.btnVendasProduto.Name = "btnVendasProduto";
             this.btnVendasProduto.Size = new System.Drawing.Size(140, 27);
             this.btnVendasProduto.TabIndex = 16;
-            this.btnVendasProduto.Text = "Vendas Realizadas";
+            this.btnVendasProduto.Text = "Nova Venda";
             this.btnVendasProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVendasProduto.UseVisualStyleBackColor = false;
             this.btnVendasProduto.Click += new System.EventHandler(this.btnVendasProduto_Click);
@@ -519,7 +526,7 @@
             this.subMenuVendas.Controls.Add(this.btnClientes);
             this.subMenuVendas.Controls.Add(this.panel14);
             this.subMenuVendas.Controls.Add(this.btnVendasProduto);
-            this.subMenuVendas.Location = new System.Drawing.Point(225, 78);
+            this.subMenuVendas.Location = new System.Drawing.Point(226, 86);
             this.subMenuVendas.Name = "subMenuVendas";
             this.subMenuVendas.Size = new System.Drawing.Size(146, 68);
             this.subMenuVendas.TabIndex = 17;
@@ -532,7 +539,7 @@
             this.SubMenuCompras.Controls.Add(this.btnFornecedores);
             this.SubMenuCompras.Controls.Add(this.panel5);
             this.SubMenuCompras.Controls.Add(this.btnEntrada);
-            this.SubMenuCompras.Location = new System.Drawing.Point(377, 78);
+            this.SubMenuCompras.Location = new System.Drawing.Point(378, 86);
             this.SubMenuCompras.Name = "SubMenuCompras";
             this.SubMenuCompras.Size = new System.Drawing.Size(127, 68);
             this.SubMenuCompras.TabIndex = 20;
@@ -599,7 +606,7 @@
             this.SubMenuSistema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(90)))));
             this.SubMenuSistema.Controls.Add(this.btnSairSistema);
             this.SubMenuSistema.Controls.Add(this.panel12);
-            this.SubMenuSistema.Location = new System.Drawing.Point(1106, 79);
+            this.SubMenuSistema.Location = new System.Drawing.Point(1107, 87);
             this.SubMenuSistema.Name = "SubMenuSistema";
             this.SubMenuSistema.Size = new System.Drawing.Size(133, 30);
             this.SubMenuSistema.TabIndex = 29;
@@ -638,7 +645,7 @@
             this.SubMenuConfiguracoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(90)))));
             this.SubMenuConfiguracoes.Controls.Add(this.btnFuncionarios);
             this.SubMenuConfiguracoes.Controls.Add(this.panel3);
-            this.SubMenuConfiguracoes.Location = new System.Drawing.Point(897, 79);
+            this.SubMenuConfiguracoes.Location = new System.Drawing.Point(898, 87);
             this.SubMenuConfiguracoes.Name = "SubMenuConfiguracoes";
             this.SubMenuConfiguracoes.Size = new System.Drawing.Size(128, 30);
             this.SubMenuConfiguracoes.TabIndex = 30;
@@ -681,7 +688,7 @@
             this.SubMenuConsultas.Controls.Add(this.btnCompraData);
             this.SubMenuConsultas.Controls.Add(this.panel17);
             this.SubMenuConsultas.Controls.Add(this.btnVendaData);
-            this.SubMenuConsultas.Location = new System.Drawing.Point(527, 78);
+            this.SubMenuConsultas.Location = new System.Drawing.Point(528, 86);
             this.SubMenuConsultas.Name = "SubMenuConsultas";
             this.SubMenuConsultas.Size = new System.Drawing.Size(154, 100);
             this.SubMenuConsultas.TabIndex = 31;
@@ -793,7 +800,7 @@
             this.SubMenuFerramentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(90)))));
             this.SubMenuFerramentas.Controls.Add(this.panel19);
             this.SubMenuFerramentas.Controls.Add(this.btnBeckupBd);
-            this.SubMenuFerramentas.Location = new System.Drawing.Point(697, 79);
+            this.SubMenuFerramentas.Location = new System.Drawing.Point(698, 87);
             this.SubMenuFerramentas.Name = "SubMenuFerramentas";
             this.SubMenuFerramentas.Size = new System.Drawing.Size(192, 30);
             this.SubMenuFerramentas.TabIndex = 32;
@@ -807,46 +814,6 @@
             this.panel19.Size = new System.Drawing.Size(5, 28);
             this.panel19.TabIndex = 17;
             // 
-            // btnsairInferior
-            // 
-            this.btnsairInferior.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnsairInferior.Image = ((System.Drawing.Image)(resources.GetObject("btnsairInferior.Image")));
-            this.btnsairInferior.Location = new System.Drawing.Point(3, 735);
-            this.btnsairInferior.Name = "btnsairInferior";
-            this.btnsairInferior.Size = new System.Drawing.Size(55, 50);
-            this.btnsairInferior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnsairInferior.TabIndex = 27;
-            this.btnsairInferior.TabStop = false;
-            this.btnsairInferior.Click += new System.EventHandler(this.btnsairInferior_Click);
-            // 
-            // btnCaixa
-            // 
-            this.btnCaixa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCaixa.FlatAppearance.BorderSize = 0;
-            this.btnCaixa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaixa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaixa.ForeColor = System.Drawing.Color.White;
-            this.btnCaixa.Image = ((System.Drawing.Image)(resources.GetObject("btnCaixa.Image")));
-            this.btnCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaixa.Location = new System.Drawing.Point(15, 407);
-            this.btnCaixa.Name = "btnCaixa";
-            this.btnCaixa.Size = new System.Drawing.Size(217, 32);
-            this.btnCaixa.TabIndex = 24;
-            this.btnCaixa.Text = "Caixa";
-            this.btnCaixa.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CamadaApresentacao.Properties.Resources.LOGOS;
-            this.pictureBox2.Location = new System.Drawing.Point(391, 237);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(651, 260);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -856,37 +823,157 @@
             // lblHora
             // 
             this.lblHora.AutoSize = true;
-            this.lblHora.BackColor = System.Drawing.Color.Transparent;
+            this.lblHora.BackColor = System.Drawing.Color.White;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(720, 447);
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblHora.Location = new System.Drawing.Point(625, 447);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(96, 37);
             this.lblHora.TabIndex = 36;
             this.lblHora.Text = "label4";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(90)))));
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 38);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1251, 49);
+            this.panel2.TabIndex = 37;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(1015, 743);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 21);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Permissão:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(759, 743);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 21);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Usuário Logado:";
+            // 
+            // lbAcesso
+            // 
+            this.lbAcesso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbAcesso.AutoSize = true;
+            this.lbAcesso.BackColor = System.Drawing.Color.Transparent;
+            this.lbAcesso.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAcesso.ForeColor = System.Drawing.Color.Navy;
+            this.lbAcesso.Location = new System.Drawing.Point(1108, 743);
+            this.lbAcesso.Name = "lbAcesso";
+            this.lbAcesso.Size = new System.Drawing.Size(51, 21);
+            this.lbAcesso.TabIndex = 39;
+            this.lbAcesso.Text = "label1";
+            // 
+            // lbNome
+            // 
+            this.lbNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbNome.AutoSize = true;
+            this.lbNome.BackColor = System.Drawing.Color.Transparent;
+            this.lbNome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNome.ForeColor = System.Drawing.Color.Navy;
+            this.lbNome.Location = new System.Drawing.Point(894, 743);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(51, 21);
+            this.lbNome.TabIndex = 38;
+            this.lbNome.Text = "label1";
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.BackColor = System.Drawing.Color.White;
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 766);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(1251, 22);
+            this.statusStrip.TabIndex = 42;
+            this.statusStrip.Text = "Sistema de Gerenciamento de Comércios - Desenvolvido por Hugo Vasconcelos";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabel.Text = "Status";
+            // 
+            // btnsairInferior
+            // 
+            this.btnsairInferior.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnsairInferior.Image = ((System.Drawing.Image)(resources.GetObject("btnsairInferior.Image")));
+            this.btnsairInferior.Location = new System.Drawing.Point(3, 808);
+            this.btnsairInferior.Name = "btnsairInferior";
+            this.btnsairInferior.Size = new System.Drawing.Size(55, 50);
+            this.btnsairInferior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnsairInferior.TabIndex = 27;
+            this.btnsairInferior.TabStop = false;
+            this.btnsairInferior.Click += new System.EventHandler(this.btnsairInferior_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::CamadaApresentacao.Properties.Resources.Edsystem;
+            this.pictureBox2.Location = new System.Drawing.Point(417, 235);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(517, 196);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Bodoni MT Condensed", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.Location = new System.Drawing.Point(615, 403);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(305, 28);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Sistema Gerenciamento de Comércio";
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(70)))), ((int)(((byte)(90)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1251, 788);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.statusStrip);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbAcesso);
             this.Controls.Add(this.lblHora);
-            this.Controls.Add(this.labelPermissao);
-            this.Controls.Add(this.SubMenuFerramentas);
-            this.Controls.Add(this.labelUsuarioLogado);
-            this.Controls.Add(this.SubMenuConsultas);
-            this.Controls.Add(this.SubMenuConfiguracoes);
-            this.Controls.Add(this.labelAcesso);
-            this.Controls.Add(this.SubMenuSistema);
-            this.Controls.Add(this.labelNome);
-            this.Controls.Add(this.btnsairInferior);
-            this.Controls.Add(this.btnCaixa);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.SubMenuCompras);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.subMenuVendas);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbNome);
             this.Controls.Add(this.subMenuProdutos);
+            this.Controls.Add(this.subMenuVendas);
+            this.Controls.Add(this.SubMenuFerramentas);
+            this.Controls.Add(this.labelPermissao);
+            this.Controls.Add(this.SubMenuCompras);
+            this.Controls.Add(this.labelUsuarioLogado);
+            this.Controls.Add(this.SubMenuSistema);
+            this.Controls.Add(this.labelAcesso);
+            this.Controls.Add(this.SubMenuConsultas);
+            this.Controls.Add(this.labelNome);
+            this.Controls.Add(this.SubMenuConfiguracoes);
+            this.Controls.Add(this.btnsairInferior);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenuPrincipal";
@@ -907,6 +994,9 @@
             this.SubMenuConfiguracoes.ResumeLayout(false);
             this.SubMenuConsultas.ResumeLayout(false);
             this.SubMenuFerramentas.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnsairInferior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -944,7 +1034,6 @@
         private System.Windows.Forms.Button btnEntrada;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox btnsairInferior;
-        private System.Windows.Forms.Button btnCaixa;
         private System.Windows.Forms.Button btnSistema;
         private System.Windows.Forms.Panel SubMenuSistema;
         private System.Windows.Forms.Panel panel12;
@@ -971,5 +1060,13 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbAcesso;
+        private System.Windows.Forms.Label lbNome;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.Label label3;
     }
 }

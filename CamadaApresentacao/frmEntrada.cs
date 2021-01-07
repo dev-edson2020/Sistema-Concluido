@@ -173,6 +173,7 @@ namespace CamadaApresentacao
 
         private void frmEntrada_Load(object sender, EventArgs e)
         {
+            Top = 100;
             this.Mostrar();
             this.Habilitar(false);
             this.botoes();
@@ -468,6 +469,11 @@ namespace CamadaApresentacao
             this.chkDeletar.Visible = false;
             this.btnImprimir.Visible = false;
             this.dataLista.Enabled = true;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

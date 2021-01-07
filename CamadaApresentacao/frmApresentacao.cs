@@ -114,8 +114,7 @@ namespace CamadaApresentacao
 
         private void frmApresentacao_Load(object sender, EventArgs e)
         {
-
-            
+            Top = 100;            
             this.Mostrar();
             this.Habilitar(false);
             this.botoes();

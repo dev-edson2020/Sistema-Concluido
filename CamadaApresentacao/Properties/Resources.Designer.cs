@@ -123,6 +123,16 @@ namespace CamadaApresentacao.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Edsystem {
+            get {
+                object obj = ResourceManager.GetObject("Edsystem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Pesquisar_Filled_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-Pesquisar Filled-20", resourceCulture);

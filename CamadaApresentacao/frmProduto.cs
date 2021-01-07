@@ -158,6 +158,7 @@ namespace CamadaApresentacao
 
         private void frmProduto_Load(object sender, EventArgs e)
         {
+            Top = 100;
             this.Mostrar();
             this.Habilitar(false);
             this.botoes();
@@ -208,13 +209,20 @@ namespace CamadaApresentacao
             try
             {
                 string resp = "";
-                if (this.txtNome.Text == string.Empty || this.txtIdCategoria.Text == string.Empty || this.txtCodigo.Text == string.Empty)
+                if (this.txtNome.Text == string.Empty)
                 {
-                    MensagemErro("Preencha todos os campos");
                     errorIcone.SetError(txtNome, "Insira o nome");
-                    errorIcone.SetError(txtIdCategoria, "Insira o nome");
-                    errorIcone.SetError(txtCodigo, "Insira o nome");
+                }
+                else if (this.txtIdCategoria.Text == string.Empty)
+                {
+                    errorIcone.SetError(txtIdCategoria, "Insira a Categoria ");
+                }
+                else if (this.txtCodigo.Text == string.Empty)
+                      
+                {
+                    errorIcone.SetError(txtCodigo, "Insira o Código do Produto ");
 
+                    MensagemErro("Preencha todos os campos");               
                 }
                 else
                 {

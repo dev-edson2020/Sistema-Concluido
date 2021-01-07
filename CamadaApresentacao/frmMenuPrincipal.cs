@@ -36,7 +36,6 @@ namespace CamadaApresentacao
             SubMenuFerramentas.Visible = false;
             SubMenuConsultas.Visible = false;
 
-
             subMenuVendas.Hide();
             SubMenuCompras.Hide();
             SubMenuSistema.Hide();
@@ -54,27 +53,13 @@ namespace CamadaApresentacao
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-       
-        
-       
+        }     
+               
         private void btnsair_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-       
-        private void btnCadastroProduto_Click_1(object sender, EventArgs e)
-        {
-            subMenuProdutos.Visible = false;
-            subMenuProdutos.Hide();
-
-            frmProduto frm = frmProduto.GetInstancia();
-            frm.Show();
-        }
-
-      
-
-      
+        }      
+                      
         private void btnVendas_Click(object sender, EventArgs e)
         {
             subMenuVendas.Visible = true;
@@ -99,9 +84,8 @@ namespace CamadaApresentacao
             subMenuVendas.Visible = false;
             subMenuVendas.Hide();
             frmVenda frm = frmVenda.GetInstancia();
-            frm.Show();
+            frm.ShowDialog();
             frm.idfuncionario = Convert.ToInt32(this.IdFuncionario);
-
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -110,7 +94,7 @@ namespace CamadaApresentacao
             subMenuVendas.Hide();
 
             frmCliente frm = new frmCliente();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
@@ -135,12 +119,12 @@ namespace CamadaApresentacao
 
         private void btnEntrada_Click(object sender, EventArgs e)
         {
-            frmEntrada frm = frmEntrada.GetInstancia();
-            frm.Show();
-            frm.idfuncionario = Convert.ToInt32(this.IdFuncionario);
-
             SubMenuCompras.Visible = false;
             SubMenuCompras.Hide();
+            frmEntrada frm = frmEntrada.GetInstancia();
+            frm.ShowDialog();
+            frm.idfuncionario = Convert.ToInt32(this.IdFuncionario);
+                      
         }
 
       
@@ -216,7 +200,7 @@ namespace CamadaApresentacao
             SubMenuConfiguracoes.Hide();
 
             frmFuncionario frm = new frmFuncionario();
-            frm.Show();
+            frm.ShowDialog();
         }
         private void btnConsultas_Click(object sender, EventArgs e)
         {
@@ -248,8 +232,8 @@ namespace CamadaApresentacao
         {
             SubMenuConsultas.Visible = false;
             SubMenuConsultas.Hide();
-            frmEntrada frm = new frmEntrada();
-            frm.Show();
+            frmVenda frm = new frmVenda();
+            frm.ShowDialog();
             frm.OcultarTab();
         }
 
@@ -257,16 +241,17 @@ namespace CamadaApresentacao
         {
             SubMenuConsultas.Visible = false;
             SubMenuConsultas.Hide();
-            frmEntrada frm = new frmEntrada();         
-            frm.Show();
+            frmEntrada frm = new frmEntrada();
+            frm.ShowDialog();
             frm.OcultarTab();
         }
 
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
-           // GestaoUsuario();
-           // labelNome.Text = Nome.ToLower();
-           // labelAcesso.Text = Acesso;
+            
+             GestaoUsuario();
+             lbNome.Text = Nome.ToLower();
+             lbAcesso.Text = Acesso;
         }
         private void GestaoUsuario()
         {
@@ -349,7 +334,7 @@ namespace CamadaApresentacao
             SubMenuCompras.Visible = false;
             SubMenuCompras.Hide();
             frmFornecedor fornec = new frmFornecedor();
-            fornec.Show();
+            fornec.ShowDialog();
         }
 
        
@@ -359,7 +344,7 @@ namespace CamadaApresentacao
             SubMenuConsultas.Hide();
 
             Consultas.frmConsulta_Estoque_Produtos frm = new Consultas.frmConsulta_Estoque_Produtos();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         private void btnApresentacao_Click(object sender, EventArgs e)
@@ -367,8 +352,8 @@ namespace CamadaApresentacao
             subMenuProdutos.Visible = false;
             subMenuProdutos.Hide();
             frmApresentacao form = new frmApresentacao();
-            form.Show();
-           
+            form.ShowDialog();
+
         }
 
         private void btnCategorias_Click(object sender, EventArgs e)
@@ -376,13 +361,20 @@ namespace CamadaApresentacao
             subMenuProdutos.Visible = false;
             subMenuProdutos.Hide();
             frmCategoria form = new frmCategoria();
-            form.Show();
+            form.ShowDialog();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString();
+        }
 
+        private void btnCadastroProduto_Click(object sender, EventArgs e)
+        {
+            subMenuProdutos.Visible = false;
+            subMenuProdutos.Hide();
+            frmProduto frm = frmProduto.GetInstancia();
+            frm.ShowDialog();
         }
     }
 

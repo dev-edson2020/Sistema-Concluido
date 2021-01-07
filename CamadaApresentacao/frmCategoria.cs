@@ -109,6 +109,7 @@ namespace CamadaApresentacao
 
         private void frmCategoria_Load(object sender, EventArgs e)
         {
+            Top = 100;
             this.Mostrar();
             this.Habilitar(false);
             this.botoes();

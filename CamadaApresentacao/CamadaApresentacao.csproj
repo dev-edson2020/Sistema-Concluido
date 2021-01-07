@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas\frmConsulta_Estoque_Produtos.cs" />
+    <Compile Include="Consultas\frmConsulta_Estoque_Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Consultas\frmConsulta_Estoque_Produtos.designer.cs">
       <DependentUpon>frmConsulta_Estoque_Produtos.cs</DependentUpon>
     </Compile>
@@ -250,7 +252,9 @@
   <ItemGroup>
     <None Include="Resources\pqscli.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Edsystem.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

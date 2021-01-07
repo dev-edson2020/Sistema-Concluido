@@ -141,8 +141,7 @@ namespace CamadaApresentacao
         private void ocultarColunas()
         {
             this.dataLista.Columns[0].Visible = false;
-            this.dataLista.Columns[1].Visible = false;
-            this.dataLista.Columns[8].Visible = false;
+          
         }
 
 
@@ -199,6 +198,7 @@ namespace CamadaApresentacao
 
         private void frmVenda_Load(object sender, EventArgs e)
         {
+            Top = 100;
             this.Mostrar();
             this.Habilitar(false);
             this.botoes();
@@ -358,8 +358,6 @@ namespace CamadaApresentacao
                 }
                 else
                 {
-
-
                     if (this.eNovo)
                     {
                         resp = NVenda.Inserir(Convert.ToInt32(this.txtIdCliente.Text), 
@@ -409,7 +407,7 @@ namespace CamadaApresentacao
                     errorIcone.SetError(txtIdProduto, "Insira o Produto");
                     errorIcone.SetError(txtEstoqueAtual, "Insira o Estoque Inicial");
                     errorIcone.SetError(txtPrecoCompra, "Insira o preço de compra");
-                    errorIcone.SetError(txtPrecoCompra, "Insira o valor do desconto");
+                    errorIcone.SetError(txtDesconto, "Insira o valor do desconto");
 
                 }
                 else
@@ -498,6 +496,5 @@ namespace CamadaApresentacao
             this.btnImprimir.Visible = false;
             this.dataLista.Enabled = true;
         }
-
     }
 }

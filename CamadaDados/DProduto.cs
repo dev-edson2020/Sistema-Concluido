@@ -436,8 +436,5 @@ namespace CamadaDados
             return DtResultado;
 
         }
-
-
-
     }
 }
