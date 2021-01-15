@@ -34,6 +34,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.chkDeletar = new System.Windows.Forms.CheckBox();
             this.dataLista = new System.Windows.Forms.DataGridView();
+            this.Deletar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
@@ -54,9 +57,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.Deletar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -127,6 +127,28 @@
             this.dataLista.TabIndex = 6;
             this.dataLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentClick);
             this.dataLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellDoubleClick);
+            // 
+            // Deletar
+            // 
+            this.Deletar.HeaderText = "Deletar";
+            this.Deletar.Name = "Deletar";
+            this.Deletar.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 600;
+            // 
+            // Descricao
+            // 
+            this.Descricao.DataPropertyName = "descricao";
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.ReadOnly = true;
+            this.Descricao.Width = 500;
             // 
             // lblTotal
             // 
@@ -297,8 +319,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(3, 55);
             this.tabControl1.Name = "tabControl1";
@@ -320,28 +342,6 @@
             this.label1.Size = new System.Drawing.Size(203, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "APRESENTAÇÃO ";
-            // 
-            // Deletar
-            // 
-            this.Deletar.HeaderText = "Deletar";
-            this.Deletar.Name = "Deletar";
-            this.Deletar.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 600;
-            // 
-            // Descricao
-            // 
-            this.Descricao.DataPropertyName = "descricao";
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.ReadOnly = true;
-            this.Descricao.Width = 500;
             // 
             // frmApresentacao
             // 

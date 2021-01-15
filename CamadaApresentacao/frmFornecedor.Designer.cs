@@ -32,10 +32,19 @@
             this.ttMensagem = new System.Windows.Forms.ToolTip(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbBusca = new System.Windows.Forms.ComboBox();
             this.chkDeletar = new System.Windows.Forms.CheckBox();
             this.dataLista = new System.Windows.Forms.DataGridView();
             this.Deletar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Setor_Comercial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Url = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
@@ -67,7 +76,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -108,6 +116,15 @@
             this.tabPage1.Text = "Listar";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 21);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Buscar por:";
+            // 
             // cbBusca
             // 
             this.cbBusca.DisplayMember = "1";
@@ -139,7 +156,15 @@
             this.dataLista.AllowUserToOrderColumns = true;
             this.dataLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Deletar});
+            this.Deletar,
+            this.Empresa,
+            this.Setor_Comercial,
+            this.Tipo_Documento,
+            this.Numero_Documento,
+            this.Endereco,
+            this.Telefone,
+            this.Email,
+            this.Url});
             this.dataLista.Location = new System.Drawing.Point(9, 124);
             this.dataLista.MultiSelect = false;
             this.dataLista.Name = "dataLista";
@@ -155,6 +180,70 @@
             this.Deletar.HeaderText = "Deletar";
             this.Deletar.Name = "Deletar";
             this.Deletar.ReadOnly = true;
+            // 
+            // Empresa
+            // 
+            this.Empresa.DataPropertyName = "empresa";
+            this.Empresa.HeaderText = "Empresa";
+            this.Empresa.Name = "Empresa";
+            this.Empresa.ReadOnly = true;
+            this.Empresa.Width = 200;
+            // 
+            // Setor_Comercial
+            // 
+            this.Setor_Comercial.DataPropertyName = "setor_comercial";
+            this.Setor_Comercial.HeaderText = "Setor Comercial";
+            this.Setor_Comercial.Name = "Setor_Comercial";
+            this.Setor_Comercial.ReadOnly = true;
+            this.Setor_Comercial.Width = 250;
+            // 
+            // Tipo_Documento
+            // 
+            this.Tipo_Documento.DataPropertyName = "tipo_documento";
+            this.Tipo_Documento.HeaderText = "Tipo Documento";
+            this.Tipo_Documento.Name = "Tipo_Documento";
+            this.Tipo_Documento.ReadOnly = true;
+            this.Tipo_Documento.Width = 250;
+            // 
+            // Numero_Documento
+            // 
+            this.Numero_Documento.DataPropertyName = "numero_documento";
+            this.Numero_Documento.HeaderText = "Número Documento";
+            this.Numero_Documento.Name = "Numero_Documento";
+            this.Numero_Documento.ReadOnly = true;
+            this.Numero_Documento.Width = 250;
+            // 
+            // Endereco
+            // 
+            this.Endereco.DataPropertyName = "endereco";
+            this.Endereco.HeaderText = "Endereço";
+            this.Endereco.Name = "Endereco";
+            this.Endereco.ReadOnly = true;
+            this.Endereco.Width = 250;
+            // 
+            // Telefone
+            // 
+            this.Telefone.DataPropertyName = "telefone";
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
+            this.Telefone.Width = 150;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 250;
+            // 
+            // Url
+            // 
+            this.Url.HeaderText = "Url";
+            this.Url.Name = "Url";
+            this.Url.ReadOnly = true;
+            this.Url.Visible = false;
+            this.Url.Width = 200;
             // 
             // lblTotal
             // 
@@ -433,8 +522,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 52);
             this.tabControl1.Name = "tabControl1";
@@ -456,15 +545,6 @@
             this.label1.Size = new System.Drawing.Size(200, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "FORNECEDORES";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 21);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Buscar por:";
             // 
             // frmFornecedor
             // 
@@ -498,7 +578,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.CheckBox chkDeletar;
         private System.Windows.Forms.DataGridView dataLista;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Deletar;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnDeletar;
@@ -532,5 +611,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbBusca;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Deletar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Empresa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Setor_Comercial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_Documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Endereco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Url;
     }
 }

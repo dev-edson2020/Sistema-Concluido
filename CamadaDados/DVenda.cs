@@ -228,7 +228,6 @@ namespace CamadaDados
                 ParIdFuncionario.SqlDbType = SqlDbType.Int;
                 ParIdFuncionario.Value = Venda.IdFuncionario;
                 SqlCmd.Parameters.Add(ParIdFuncionario);
-
                 
                 SqlParameter ParData = new SqlParameter();
                 ParData.ParameterName = "@data";
@@ -250,7 +249,6 @@ namespace CamadaDados
                 ParSerie.Value = Venda.Serie;
                 SqlCmd.Parameters.Add(ParSerie);
 
-
                 SqlParameter ParCorrelativo = new SqlParameter();
                 ParCorrelativo.ParameterName = "@correlativo";
                 ParCorrelativo.SqlDbType = SqlDbType.VarChar;
@@ -265,9 +263,7 @@ namespace CamadaDados
                 ParImposto.Precision = 4;
                 ParImposto.Scale = 2;
                 ParImposto.Value = Venda.Imposto;
-                SqlCmd.Parameters.Add(ParImposto);
-
-               
+                SqlCmd.Parameters.Add(ParImposto);               
 
                 //Executar o comando
 
@@ -430,11 +426,7 @@ namespace CamadaDados
                 DtResultado = null;
             }
             return DtResultado;
-
         }
-
-
-
 
         //Método Mostrar Detalhes
         public DataTable MostrarDetalhes(string TextoBuscar)
@@ -449,7 +441,6 @@ namespace CamadaDados
                 SqlCmd.CommandText = "spmostrar_detalhe_venda";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-
                 SqlParameter ParTextoBuscar = new SqlParameter();
                 ParTextoBuscar.ParameterName = "@textobuscar";
                 ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
@@ -457,22 +448,15 @@ namespace CamadaDados
                 ParTextoBuscar.Value = TextoBuscar;
                 SqlCmd.Parameters.Add(ParTextoBuscar);
 
-
-
                 SqlDataAdapter sqlDat = new SqlDataAdapter(SqlCmd);
                 sqlDat.Fill(DtResultado);
-
             }
             catch (Exception ex)
             {
                 DtResultado = null;
             }
             return DtResultado;
-
         }
-
-
-
 
         //Método Mostrar Produto por Nome
         public DataTable MostrarProduto_Venda_Nome(string TextoBuscar)
@@ -495,22 +479,15 @@ namespace CamadaDados
                 ParTextoBuscar.Value = TextoBuscar;
                 SqlCmd.Parameters.Add(ParTextoBuscar);
 
-
-
                 SqlDataAdapter sqlDat = new SqlDataAdapter(SqlCmd);
                 sqlDat.Fill(DtResultado);
-
             }
             catch (Exception ex)
             {
                 DtResultado = null;
             }
             return DtResultado;
-
         }
-
-
-
 
         //Método Mostrar Produto por Código
         public DataTable MostrarProduto_Venda_Codigo(string TextoBuscar)
@@ -533,11 +510,8 @@ namespace CamadaDados
                 ParTextoBuscar.Value = TextoBuscar;
                 SqlCmd.Parameters.Add(ParTextoBuscar);
 
-
-
                 SqlDataAdapter sqlDat = new SqlDataAdapter(SqlCmd);
                 sqlDat.Fill(DtResultado);
-
             }
             catch (Exception ex)
             {

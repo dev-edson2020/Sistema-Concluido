@@ -121,8 +121,9 @@ namespace CamadaApresentacao
         {
             SubMenuCompras.Visible = false;
             SubMenuCompras.Hide();
+
             frmEntrada frm = frmEntrada.GetInstancia();
-            frm.ShowDialog();
+            frm.Show();
             frm.idfuncionario = Convert.ToInt32(this.IdFuncionario);
                       
         }
@@ -242,6 +243,7 @@ namespace CamadaApresentacao
             SubMenuConsultas.Visible = false;
             SubMenuConsultas.Hide();
             frmEntrada frm = new frmEntrada();
+            
             frm.ShowDialog();
             frm.OcultarTab();
         }

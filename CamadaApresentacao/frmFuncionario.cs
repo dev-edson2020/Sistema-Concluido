@@ -239,22 +239,7 @@ namespace CamadaApresentacao
             }
         }
 
-        private void dataLista_DoubleClick(object sender, EventArgs e)
-        {
-            this.txtId.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["idfuncionario"].Value);
-            this.txtNome.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["nome"].Value);
-            this.txtSobrenome.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["sobrenome"].Value);
-            this.cbSexo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["sexo"].Value);
-            this.dtData.Value = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["data_nasc"].Value);
-            this.txtNumeroDoc.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["num_documento"].Value);
-            this.txtEndereco.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["endereco"].Value);
-            this.txtTelefone.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["telefone"].Value);
-            this.txtEmail.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["email"].Value);
-            this.cbAcesso.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["acesso"].Value);
-            this.txtUsuario.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["usuario"].Value);
-            this.txtSenha.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["senha"].Value);
-            this.tabControl1.SelectedIndex = 1;
-        }
+      
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -342,6 +327,23 @@ namespace CamadaApresentacao
         private void cbBusca_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.txtBuscar.Text = string.Empty;
+        }
+
+        private void dataLista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.txtId.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["idfuncionario"].Value);
+            this.txtNome.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["nome"].Value);
+            this.txtSobrenome.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["sobrenome"].Value);
+            this.cbSexo.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["sexo"].Value);
+            this.dtData.Value = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["data_nasc"].Value);
+            this.txtNumeroDoc.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["num_documento"].Value);
+            this.txtEndereco.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["endereco"].Value);
+            this.txtTelefone.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["telefone"].Value);
+            this.txtEmail.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["email"].Value);
+            this.cbAcesso.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["acesso"].Value);
+            this.txtUsuario.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["usuario"].Value);
+            this.txtSenha.Text = Convert.ToString(this.dataLista.CurrentRow.Cells["senha"].Value);
+            this.tabControl1.SelectedIndex = 1;
         }
     }
 }

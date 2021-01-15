@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbTipoDoc = new System.Windows.Forms.ComboBox();
             this.dtData = new System.Windows.Forms.DateTimePicker();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
@@ -53,22 +55,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.cbBusca = new System.Windows.Forms.ComboBox();
             this.chkDeletar = new System.Windows.Forms.CheckBox();
             this.dataLista = new System.Windows.Forms.DataGridView();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnDeletar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.ttMensagem = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.Deletar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +69,16 @@
             this.Tipo_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Num_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.ttMensagem = new System.Windows.Forms.ToolTip(this.components);
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
@@ -119,6 +119,22 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Location = new System.Drawing.Point(97, 181);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(391, 29);
+            this.txtEndereco.TabIndex = 38;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 184);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 21);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Endereço";
             // 
             // cbTipoDoc
             // 
@@ -332,6 +348,15 @@
             this.tabPage1.Text = "Listar";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 7);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 21);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Buscar por:";
+            // 
             // cbBusca
             // 
             this.cbBusca.DisplayMember = "1";
@@ -383,6 +408,83 @@
             this.dataLista.TabIndex = 6;
             this.dataLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentClick);
             this.dataLista.DoubleClick += new System.EventHandler(this.dataLista_DoubleClick);
+            // 
+            // Deletar
+            // 
+            this.Deletar.HeaderText = "Deletar";
+            this.Deletar.Name = "Deletar";
+            this.Deletar.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 200;
+            // 
+            // Sobrenome
+            // 
+            this.Sobrenome.DataPropertyName = "sobrenome";
+            this.Sobrenome.HeaderText = "Sobrenome";
+            this.Sobrenome.Name = "Sobrenome";
+            this.Sobrenome.ReadOnly = true;
+            this.Sobrenome.Width = 150;
+            // 
+            // Endereco
+            // 
+            this.Endereco.DataPropertyName = "endereco";
+            this.Endereco.HeaderText = "Endereço";
+            this.Endereco.Name = "Endereco";
+            this.Endereco.ReadOnly = true;
+            this.Endereco.Width = 250;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 200;
+            // 
+            // Sexo
+            // 
+            this.Sexo.DataPropertyName = "sexo";
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.Name = "Sexo";
+            this.Sexo.ReadOnly = true;
+            this.Sexo.Width = 50;
+            // 
+            // Data_Nascimento
+            // 
+            this.Data_Nascimento.DataPropertyName = "data_nascimento";
+            this.Data_Nascimento.HeaderText = "Data Nascimento";
+            this.Data_Nascimento.Name = "Data_Nascimento";
+            this.Data_Nascimento.ReadOnly = true;
+            this.Data_Nascimento.Width = 200;
+            // 
+            // Tipo_Documento
+            // 
+            this.Tipo_Documento.DataPropertyName = "tipo_documento";
+            this.Tipo_Documento.HeaderText = "Tipo Documento";
+            this.Tipo_Documento.Name = "Tipo_Documento";
+            this.Tipo_Documento.ReadOnly = true;
+            this.Tipo_Documento.Width = 200;
+            // 
+            // Num_Documento
+            // 
+            this.Num_Documento.DataPropertyName = "num_documento";
+            this.Num_Documento.HeaderText = "Numero Documento";
+            this.Num_Documento.Name = "Num_Documento";
+            this.Num_Documento.ReadOnly = true;
+            this.Num_Documento.Width = 200;
+            // 
+            // Telefone
+            // 
+            this.Telefone.DataPropertyName = "telefone";
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
             // 
             // lblTotal
             // 
@@ -462,116 +564,14 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 52);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1112, 504);
             this.tabControl1.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 7);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 21);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Buscar por:";
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Location = new System.Drawing.Point(97, 181);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(391, 29);
-            this.txtEndereco.TabIndex = 38;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 21);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Endereço";
-            // 
-            // Deletar
-            // 
-            this.Deletar.HeaderText = "Deletar";
-            this.Deletar.Name = "Deletar";
-            this.Deletar.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 200;
-            // 
-            // Sobrenome
-            // 
-            this.Sobrenome.DataPropertyName = "sobrenome";
-            this.Sobrenome.HeaderText = "Sobrenome";
-            this.Sobrenome.Name = "Sobrenome";
-            this.Sobrenome.ReadOnly = true;
-            this.Sobrenome.Width = 150;
-            // 
-            // Endereco
-            // 
-            this.Endereco.DataPropertyName = "endereco";
-            this.Endereco.HeaderText = "Endereço";
-            this.Endereco.Name = "Endereco";
-            this.Endereco.ReadOnly = true;
-            this.Endereco.Width = 250;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 200;
-            // 
-            // Sexo
-            // 
-            this.Sexo.DataPropertyName = "sexo";
-            this.Sexo.HeaderText = "Sexo";
-            this.Sexo.Name = "Sexo";
-            this.Sexo.ReadOnly = true;
-            this.Sexo.Width = 50;
-            // 
-            // Data_Nascimento
-            // 
-            this.Data_Nascimento.DataPropertyName = "data_nascimento";
-            this.Data_Nascimento.HeaderText = "Data Nascimento";
-            this.Data_Nascimento.Name = "Data_Nascimento";
-            this.Data_Nascimento.ReadOnly = true;
-            this.Data_Nascimento.Width = 200;
-            // 
-            // Tipo_Documento
-            // 
-            this.Tipo_Documento.DataPropertyName = "tipo_documento";
-            this.Tipo_Documento.HeaderText = "Tipo Documento";
-            this.Tipo_Documento.Name = "Tipo_Documento";
-            this.Tipo_Documento.ReadOnly = true;
-            this.Tipo_Documento.Width = 200;
-            // 
-            // Num_Documento
-            // 
-            this.Num_Documento.DataPropertyName = "num_documento";
-            this.Num_Documento.HeaderText = "Numero Documento";
-            this.Num_Documento.Name = "Num_Documento";
-            this.Num_Documento.ReadOnly = true;
-            this.Num_Documento.Width = 200;
-            // 
-            // Telefone
-            // 
-            this.Telefone.DataPropertyName = "telefone";
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
-            this.Telefone.ReadOnly = true;
             // 
             // frmCliente
             // 

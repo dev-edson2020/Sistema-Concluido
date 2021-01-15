@@ -209,14 +209,14 @@
             // 
             // txtCorrelativo
             // 
-            this.txtCorrelativo.Location = new System.Drawing.Point(387, 67);
+            this.txtCorrelativo.Location = new System.Drawing.Point(426, 72);
             this.txtCorrelativo.Name = "txtCorrelativo";
             this.txtCorrelativo.Size = new System.Drawing.Size(114, 29);
             this.txtCorrelativo.TabIndex = 26;
             // 
             // txtSerie
             // 
-            this.txtSerie.Location = new System.Drawing.Point(336, 67);
+            this.txtSerie.Location = new System.Drawing.Point(375, 72);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(45, 29);
             this.txtSerie.TabIndex = 25;
@@ -224,7 +224,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(235, 70);
+            this.label11.Location = new System.Drawing.Point(274, 75);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 21);
             this.label11.TabIndex = 24;
@@ -236,7 +236,7 @@
             this.cbComprovante.Items.AddRange(new object[] {
             "Nota Fiscal",
             "Recibo"});
-            this.cbComprovante.Location = new System.Drawing.Point(108, 70);
+            this.cbComprovante.Location = new System.Drawing.Point(126, 72);
             this.cbComprovante.Name = "cbComprovante";
             this.cbComprovante.Size = new System.Drawing.Size(121, 29);
             this.cbComprovante.TabIndex = 23;
@@ -284,7 +284,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 73);
+            this.label6.Location = new System.Drawing.Point(10, 72);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(110, 21);
             this.label6.TabIndex = 10;
@@ -323,7 +323,7 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(108, 35);
+            this.txtId.Location = new System.Drawing.Point(126, 34);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(78, 29);
             this.txtId.TabIndex = 3;
@@ -361,7 +361,6 @@
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalhes";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dtVencimento
             // 
@@ -519,8 +518,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 45);
             this.tabControl1.Name = "tabControl1";
@@ -667,7 +666,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entrada de Produtos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmEntrada_FormClosed);
-            this.Load += new System.EventHandler(this.frmEntrada_Load);
+            this.Load += new System.EventHandler(this.f);
             ((System.ComponentModel.ISupportInitialize)(this.errorIcone)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -696,7 +695,6 @@
         private System.Windows.Forms.DateTimePicker dtInicial;
         private System.Windows.Forms.CheckBox chkDeletar;
         private System.Windows.Forms.DataGridView dataLista;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Deletar;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnDeletar;
@@ -706,9 +704,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtImposto;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtCorrelativo;
-        private System.Windows.Forms.TextBox txtSerie;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cbComprovante;
         private System.Windows.Forms.DateTimePicker dtData;
         private System.Windows.Forms.Label label10;
@@ -742,5 +737,9 @@
         private System.Windows.Forms.Label lblTotalPagar;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DataGridView dataListaDetalhes;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Deletar;
+        private System.Windows.Forms.TextBox txtCorrelativo;
+        private System.Windows.Forms.TextBox txtSerie;
+        private System.Windows.Forms.Label label11;
     }
 }

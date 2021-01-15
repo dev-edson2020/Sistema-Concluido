@@ -45,6 +45,19 @@
             this.cbBusca = new System.Windows.Forms.ComboBox();
             this.chkDeletar = new System.Windows.Forms.CheckBox();
             this.dataLista = new System.Windows.Forms.DataGridView();
+            this.Deletar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data_Nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Num_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Acesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
@@ -73,19 +86,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensagem = new System.Windows.Forms.ToolTip(this.components);
-            this.Deletar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Data_Nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Num_Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Acesso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
@@ -182,8 +182,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(8, 52);
             this.tabControl1.Name = "tabControl1";
@@ -270,8 +270,109 @@
             this.dataLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataLista.Size = new System.Drawing.Size(1098, 341);
             this.dataLista.TabIndex = 6;
-            this.dataLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentClick);
-            this.dataLista.DoubleClick += new System.EventHandler(this.dataLista_DoubleClick);
+            this.dataLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellDoubleClick);
+            // 
+            // Deletar
+            // 
+            this.Deletar.HeaderText = "Deletar";
+            this.Deletar.Name = "Deletar";
+            this.Deletar.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 200;
+            // 
+            // Sobrenome
+            // 
+            this.Sobrenome.DataPropertyName = "sobrenome";
+            this.Sobrenome.HeaderText = "Sobrenome";
+            this.Sobrenome.Name = "Sobrenome";
+            this.Sobrenome.ReadOnly = true;
+            this.Sobrenome.Width = 150;
+            // 
+            // Endereco
+            // 
+            this.Endereco.DataPropertyName = "endereco";
+            this.Endereco.HeaderText = "Endereco";
+            this.Endereco.Name = "Endereco";
+            this.Endereco.ReadOnly = true;
+            this.Endereco.Width = 200;
+            // 
+            // Data_Nascimento
+            // 
+            this.Data_Nascimento.DataPropertyName = "data_nasc";
+            this.Data_Nascimento.HeaderText = "Data Nascimento";
+            this.Data_Nascimento.Name = "Data_Nascimento";
+            this.Data_Nascimento.ReadOnly = true;
+            this.Data_Nascimento.Width = 180;
+            // 
+            // IdFuncionario
+            // 
+            this.IdFuncionario.DataPropertyName = "idfuncionario";
+            this.IdFuncionario.HeaderText = "Id Funcionario";
+            this.IdFuncionario.Name = "IdFuncionario";
+            this.IdFuncionario.ReadOnly = true;
+            this.IdFuncionario.Visible = false;
+            // 
+            // Telefome
+            // 
+            this.Telefome.DataPropertyName = "telefone";
+            this.Telefome.HeaderText = "Telefone";
+            this.Telefome.Name = "Telefome";
+            this.Telefome.ReadOnly = true;
+            // 
+            // Sexo
+            // 
+            this.Sexo.DataPropertyName = "sexo";
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.Name = "Sexo";
+            this.Sexo.ReadOnly = true;
+            this.Sexo.Width = 70;
+            // 
+            // Num_Documento
+            // 
+            this.Num_Documento.DataPropertyName = "num_documento";
+            this.Num_Documento.HeaderText = "Numero Documento";
+            this.Num_Documento.Name = "Num_Documento";
+            this.Num_Documento.ReadOnly = true;
+            this.Num_Documento.Width = 230;
+            // 
+            // Acesso
+            // 
+            this.Acesso.DataPropertyName = "acesso";
+            this.Acesso.HeaderText = "Acesso";
+            this.Acesso.Name = "Acesso";
+            this.Acesso.ReadOnly = true;
+            this.Acesso.Width = 150;
+            // 
+            // Usuario
+            // 
+            this.Usuario.DataPropertyName = "usuario";
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
+            this.Usuario.Width = 150;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 200;
+            // 
+            // Senha
+            // 
+            this.Senha.DataPropertyName = "senha";
+            this.Senha.HeaderText = "Senha";
+            this.Senha.Name = "Senha";
+            this.Senha.ReadOnly = true;
+            this.Senha.Visible = false;
+            this.Senha.Width = 150;
             // 
             // lblTotal
             // 
@@ -541,108 +642,6 @@
             // ttMensagem
             // 
             this.ttMensagem.IsBalloon = true;
-            // 
-            // Deletar
-            // 
-            this.Deletar.HeaderText = "Deletar";
-            this.Deletar.Name = "Deletar";
-            this.Deletar.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 200;
-            // 
-            // Sobrenome
-            // 
-            this.Sobrenome.DataPropertyName = "sobrenome";
-            this.Sobrenome.HeaderText = "Sobrenome";
-            this.Sobrenome.Name = "Sobrenome";
-            this.Sobrenome.ReadOnly = true;
-            this.Sobrenome.Width = 150;
-            // 
-            // Endereco
-            // 
-            this.Endereco.DataPropertyName = "endereco";
-            this.Endereco.HeaderText = "Endereco";
-            this.Endereco.Name = "Endereco";
-            this.Endereco.ReadOnly = true;
-            this.Endereco.Width = 200;
-            // 
-            // Data_Nascimento
-            // 
-            this.Data_Nascimento.DataPropertyName = "data_nasc";
-            this.Data_Nascimento.HeaderText = "Data Nascimento";
-            this.Data_Nascimento.Name = "Data_Nascimento";
-            this.Data_Nascimento.ReadOnly = true;
-            this.Data_Nascimento.Width = 180;
-            // 
-            // IdFuncionario
-            // 
-            this.IdFuncionario.DataPropertyName = "idfuncionario";
-            this.IdFuncionario.HeaderText = "Id Funcionario";
-            this.IdFuncionario.Name = "IdFuncionario";
-            this.IdFuncionario.ReadOnly = true;
-            this.IdFuncionario.Visible = false;
-            // 
-            // Telefome
-            // 
-            this.Telefome.DataPropertyName = "telefone";
-            this.Telefome.HeaderText = "Telefone";
-            this.Telefome.Name = "Telefome";
-            this.Telefome.ReadOnly = true;
-            // 
-            // Sexo
-            // 
-            this.Sexo.DataPropertyName = "sexo";
-            this.Sexo.HeaderText = "Sexo";
-            this.Sexo.Name = "Sexo";
-            this.Sexo.ReadOnly = true;
-            this.Sexo.Width = 70;
-            // 
-            // Num_Documento
-            // 
-            this.Num_Documento.DataPropertyName = "num_documento";
-            this.Num_Documento.HeaderText = "Numero Documento";
-            this.Num_Documento.Name = "Num_Documento";
-            this.Num_Documento.ReadOnly = true;
-            this.Num_Documento.Width = 230;
-            // 
-            // Acesso
-            // 
-            this.Acesso.DataPropertyName = "acesso";
-            this.Acesso.HeaderText = "Acesso";
-            this.Acesso.Name = "Acesso";
-            this.Acesso.ReadOnly = true;
-            this.Acesso.Width = 150;
-            // 
-            // Usuario
-            // 
-            this.Usuario.DataPropertyName = "usuario";
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
-            this.Usuario.Width = 150;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 200;
-            // 
-            // Senha
-            // 
-            this.Senha.DataPropertyName = "senha";
-            this.Senha.HeaderText = "Senha";
-            this.Senha.Name = "Senha";
-            this.Senha.ReadOnly = true;
-            this.Senha.Visible = false;
-            this.Senha.Width = 150;
             // 
             // frmFuncionario
             // 

@@ -29,8 +29,6 @@ namespace CamadaApresentacao
             }
             return _Instancia;
         }
-
-
         public frmVenda()
         {
             InitializeComponent();
@@ -41,24 +39,16 @@ namespace CamadaApresentacao
             this.txtCliente.Enabled = false;
             this.txtProduto.Enabled = false;
         }
-
-
-
         //Mostrar mensagem de confirmação
         private void MensagemOk(string mensagem)
         {
             MessageBox.Show(mensagem, "Sistema Comércio", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
         //Mostrar mensagem de erro
         private void MensagemErro(string mensagem)
         {
             MessageBox.Show(mensagem, "Sistema Comércio", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-
-
         //Limpar Campos
         private void Limpar()
         {
@@ -70,7 +60,6 @@ namespace CamadaApresentacao
             
             this.lblTotalPagar.Text = "0,0";
             this.CriarTabela();
-
         }
 
         private void LimparDetalhes()
@@ -83,8 +72,6 @@ namespace CamadaApresentacao
             this.txtDesconto.Text = "0";
             this.txtquantidade.Text = string.Empty;
         }
-
-
         //Habilitar os text box
         private void Habilitar(bool valor)
         {
@@ -106,8 +93,6 @@ namespace CamadaApresentacao
             this.btnBuscarCliente.Enabled = valor;
             this.btnBuscarProduto.Enabled = valor;
         }
-
-
         //Habilitar os botoes
         private void botoes()
         {
@@ -120,7 +105,6 @@ namespace CamadaApresentacao
                 this.btnCancelar.Enabled = true;
                 this.btnBuscarCliente.Enabled = true;
                 this.btnBuscarProduto.Enabled = true;
-
             }
             else
             {
@@ -132,18 +116,13 @@ namespace CamadaApresentacao
                 this.btnBuscarCliente.Enabled = false;
                 this.btnBuscarProduto.Enabled = false;
             }
-
         }
-
-
 
         //Ocultar as Colunas do Grid
         private void ocultarColunas()
         {
-            this.dataLista.Columns[0].Visible = false;
-          
+            this.dataLista.Columns[0].Visible = false;          
         }
-
 
         //Mostrar no Data Grid
         private void Mostrar()
@@ -152,8 +131,6 @@ namespace CamadaApresentacao
             this.ocultarColunas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataLista.Rows.Count);
         }
-
-
 
         //Buscar por Datas
         private void BuscarData()
@@ -164,14 +141,11 @@ namespace CamadaApresentacao
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataLista.Rows.Count);
         }
 
-
         //Mostrar Detalhe Entrada
         private void MostrarDetalheEntrada()
         {
             this.dataListaDetalhes.DataSource = NVenda.MostrarDetalhes(this.txtId.Text);
-
         }
-
 
         //BUSCAR O CLIENTE
         public void setCliente(string idcliente, string nome)
@@ -194,8 +168,6 @@ namespace CamadaApresentacao
 
         }
 
-
-
         private void frmVenda_Load(object sender, EventArgs e)
         {
             Top = 100;
@@ -204,6 +176,46 @@ namespace CamadaApresentacao
             this.botoes();
             this.CriarTabela();
             this.cbComprovante.SelectedIndex = 0;
+            MostrarColunasGridVendas();
+            MostrarColunasGridListar();
+        }
+
+        private void MostrarColunasGridListar()
+        {
+            dataLista.Columns[1].HeaderText = "ID Venda";
+            dataLista.Columns[2].HeaderText = "Cliente";
+            dataLista.Columns[3].HeaderText = "Data";
+            dataLista.Columns[4].HeaderText = "Tipo Comprovante";
+            dataLista.Columns[5].HeaderText = "Série";
+            dataLista.Columns[6].HeaderText = "Correlativo";
+            dataLista.Columns[7].HeaderText = "Imposto";
+            dataLista.Columns[8].HeaderText = "Total";
+
+            dataLista.Columns[1].Width = 150;
+            dataLista.Columns[2].Width = 250;
+            dataLista.Columns[3].Width = 150;
+            dataLista.Columns[4].Width = 200;
+            dataLista.Columns[5].Width = 150;
+            dataLista.Columns[6].Width = 200;
+            dataLista.Columns[7].Width = 200;
+            dataLista.Columns[8].Width = 200;
+        }
+
+        private void MostrarColunasGridVendas()
+        {
+            dataListaDetalhes.Columns[0].HeaderText = "ID Detalhe";
+            dataListaDetalhes.Columns[1].HeaderText = "Produto";
+            dataListaDetalhes.Columns[2].HeaderText = "Quantidade";
+            dataListaDetalhes.Columns[3].HeaderText = "Preço Venda";
+            dataListaDetalhes.Columns[4].HeaderText = "Desconto";
+            dataListaDetalhes.Columns[5].HeaderText = "SubTotal";
+
+            dataListaDetalhes.Columns[0].Width = 150;
+            dataListaDetalhes.Columns[1].Width = 250;
+            dataListaDetalhes.Columns[2].Width = 150;
+            dataListaDetalhes.Columns[3].Width = 150;
+            dataListaDetalhes.Columns[4].Width = 150;
+            dataListaDetalhes.Columns[5].Width = 200;
         }
 
         private void frmVenda_FormClosed(object sender, FormClosedEventArgs e)
@@ -235,7 +247,6 @@ namespace CamadaApresentacao
             frmBuscarProdutoVenda frm = new frmBuscarProdutoVenda();
             frm.Show();
         }
-
 
         private void CriarTabela()
         {
@@ -278,11 +289,12 @@ namespace CamadaApresentacao
 
         private void dataLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataLista.Columns["Deletar"].Index)
+            if (e.ColumnIndex != dataLista.Columns["Deletar"].Index)
             {
-                DataGridViewCheckBoxCell ChkDeletar = (DataGridViewCheckBoxCell)dataLista.Rows[e.RowIndex].Cells["Deletar"];
-                ChkDeletar.Value = !Convert.ToBoolean(ChkDeletar.Value);
+                return;
             }
+            DataGridViewCheckBoxCell ChkDeletar = (DataGridViewCheckBoxCell)dataLista.Rows[e.RowIndex].Cells["Deletar"];
+            ChkDeletar.Value = !Convert.ToBoolean(ChkDeletar.Value);
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
@@ -352,8 +364,7 @@ namespace CamadaApresentacao
                     MensagemErro("Preencha todos os campos");
                     errorIcone.SetError(txtImposto, "Insira o Imposto");
                     errorIcone.SetError(txtIdCliente, "Insira o Fornecedor");
-                    errorIcone.SetError(txtSerie, "Insira a série");
-                    
+                    errorIcone.SetError(txtSerie, "Insira a série");                    
 
                 }
                 else
@@ -367,14 +378,12 @@ namespace CamadaApresentacao
                             dtDetalhe);
                     }
 
-
                     if (resp.Equals("OK"))
                     {
                         if (this.eNovo)
                         {
                             this.MensagemOk("Registro salvo com sucesso");
                         }
-
                     }
                     else
                     {
@@ -408,7 +417,6 @@ namespace CamadaApresentacao
                     errorIcone.SetError(txtEstoqueAtual, "Insira o Estoque Inicial");
                     errorIcone.SetError(txtPrecoCompra, "Insira o preço de compra");
                     errorIcone.SetError(txtDesconto, "Insira o valor do desconto");
-
                 }
                 else
                 {
@@ -486,7 +494,6 @@ namespace CamadaApresentacao
         {
           
         }
-
         
         public void OcultarTab()
         {
@@ -495,6 +502,15 @@ namespace CamadaApresentacao
             this.chkDeletar.Visible = false;
             this.btnImprimir.Visible = false;
             this.dataLista.Enabled = true;
+        }
+
+        private void txtSerie_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSerie.TextLength == 4)
+            {
+                txtCorrelativo.Focus();
+                txtCorrelativo.MaxLength = 7;
+            }
         }
     }
 }

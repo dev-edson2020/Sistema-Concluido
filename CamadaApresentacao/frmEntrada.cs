@@ -171,14 +171,29 @@ namespace CamadaApresentacao
 
 
 
-        private void frmEntrada_Load(object sender, EventArgs e)
+      
+        private void MostrarColunasGrid()
         {
-            Top = 100;
-            this.Mostrar();
-            this.Habilitar(false);
-            this.botoes();
-            this.CriarTabela();
-            this.cbComprovante.SelectedIndex = 0;
+           
+            dataLista.Columns[3].HeaderText = "Fornecedor";
+            dataLista.Columns[4].HeaderText = "Data";
+            dataLista.Columns[5].HeaderText = "Tipo Comprovante";
+            dataLista.Columns[6].HeaderText = "Série";
+            dataLista.Columns[7].HeaderText = "Correlativo";
+            dataLista.Columns[8].HeaderText = "Imposto";           
+            dataLista.Columns[9].HeaderText = "Estado";
+            dataLista.Columns[10].HeaderText = "Total";
+
+            dataLista.Columns[2].Width = 180;
+            dataLista.Columns[3].Width = 150;
+            dataLista.Columns[4].Width = 100;
+            dataLista.Columns[5].Width = 170;
+            dataLista.Columns[6].Width = 80;
+            dataLista.Columns[7].Width = 100;
+            dataLista.Columns[8].Width = 80;
+            dataLista.Columns[9].Width = 100;
+            dataLista.Columns[10].Width = 80;
+
         }
 
         private void frmEntrada_FormClosed(object sender, FormClosedEventArgs e)
@@ -268,10 +283,11 @@ namespace CamadaApresentacao
         }
 
 
-        private void CriarTabela()
-        {
+        private void CriarTabela()        {
+           
+
             this.dtDetalhe = new DataTable("Detalhe");
-            this.dtDetalhe.Columns.Add("idproduto", System.Type.GetType("System.Int32"));
+            this.dtDetalhe.Columns.Add("idproduto" , System.Type.GetType("System.Int32"));
             this.dtDetalhe.Columns.Add("produto", System.Type.GetType("System.String"));
             this.dtDetalhe.Columns.Add("preco_compra", System.Type.GetType("System.Decimal"));
             this.dtDetalhe.Columns.Add("preco_venda", System.Type.GetType("System.Decimal"));
@@ -431,9 +447,10 @@ namespace CamadaApresentacao
                 //remover a linha
                 this.dtDetalhe.Rows.Remove(row);
 
-            }catch(Exception ex)
+            }
+                catch(Exception )
             {
-                MensagemErro("Não há linha para excluir!!");
+                MensagemErro("Não há linha para excluir!");
             }
         }
 
@@ -471,9 +488,40 @@ namespace CamadaApresentacao
             this.dataLista.Enabled = true;
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void f(object sender, EventArgs e)
         {
 
+            Top = 100;
+            this.Mostrar();
+            this.Habilitar(false);
+            this.botoes();
+            this.CriarTabela();
+            this.cbComprovante.SelectedIndex = 0;
+            MostrarColunasEntradasGrid();
+            MostrarColunasGrid();
+        }
+
+        private void MostrarColunasEntradasGrid()
+        {
+            dataListaDetalhes.Columns[0].HeaderText = "ID Produto";
+            dataListaDetalhes.Columns[1].HeaderText = "Produto";
+            dataListaDetalhes.Columns[2].HeaderText = "Preço Compra";
+            dataListaDetalhes.Columns[3].HeaderText = "Preço Venda";
+            dataListaDetalhes.Columns[4].HeaderText = "Estoque Inicail";
+            dataListaDetalhes.Columns[5].HeaderText = "Data Produção";
+            dataListaDetalhes.Columns[6].HeaderText = "Data Vencimento";
+            dataListaDetalhes.Columns[7].HeaderText = "SubTotal";
+            dataListaDetalhes.Columns[8].HeaderText = "Imposto";
+
+            dataListaDetalhes.Columns[0].Width = 150;
+            dataListaDetalhes.Columns[1].Width = 150;
+            dataListaDetalhes.Columns[2].Width = 150;
+            dataListaDetalhes.Columns[3].Width = 150;
+            dataListaDetalhes.Columns[4].Width = 150;
+            dataListaDetalhes.Columns[5].Width = 150;
+            dataListaDetalhes.Columns[6].Width = 180;
+            dataListaDetalhes.Columns[7].Width = 150;
+            dataListaDetalhes.Columns[8].Width = 150;
         }
     }
 }

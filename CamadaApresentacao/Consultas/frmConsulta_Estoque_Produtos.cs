@@ -37,8 +37,7 @@ namespace CamadaApresentacao.Consultas
 
         private void frmConsulta_Estoque_Produtos_Load(object sender, EventArgs e)
         {
-            this.Top = 200;
-            this.Left = 350;
+            this.Top = 100;          
             this.Mostrar();
         }
     }

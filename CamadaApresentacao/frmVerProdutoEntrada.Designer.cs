@@ -76,7 +76,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(446, 64);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(35, 13);
+            this.lblTotal.Size = new System.Drawing.Size(38, 13);
             this.lblTotal.TabIndex = 13;
             this.lblTotal.Text = "label3";
             // 
@@ -84,7 +84,7 @@
             // 
             this.txtBuscar.Location = new System.Drawing.Point(59, 45);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(139, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(139, 22);
             this.txtBuscar.TabIndex = 9;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -93,7 +93,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(18, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Nome";
             // 
@@ -108,6 +108,7 @@
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmVerProdutoEntrada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

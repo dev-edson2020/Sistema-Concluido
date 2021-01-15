@@ -34,6 +34,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.chkDeletar = new System.Windows.Forms.CheckBox();
             this.dataLista = new System.Windows.Forms.DataGridView();
+            this.Deletar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apresentacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
@@ -44,9 +50,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbApresentacao = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnBuscarCategoria = new System.Windows.Forms.Button();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.txtIdCategoria = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnCarregar = new System.Windows.Forms.Button();
+            this.pxImagem = new System.Windows.Forms.PictureBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -62,29 +72,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensagem = new System.Windows.Forms.ToolTip(this.components);
-            this.btnBuscarCategoria = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnCarregar = new System.Windows.Forms.Button();
-            this.pxImagem = new System.Windows.Forms.PictureBox();
-            this.Deletar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apresentacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pxImagem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcone)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(7, 45);
             this.tabControl1.Name = "tabControl1";
@@ -143,6 +143,52 @@
             this.dataLista.TabIndex = 6;
             this.dataLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentClick);
             this.dataLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellDoubleClick);
+            // 
+            // Deletar
+            // 
+            this.Deletar.HeaderText = "Deletar";
+            this.Deletar.Name = "Deletar";
+            this.Deletar.ReadOnly = true;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "codigo";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 200;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 250;
+            // 
+            // Descricao
+            // 
+            this.Descricao.DataPropertyName = "descricao";
+            this.Descricao.HeaderText = "Descrição";
+            this.Descricao.Name = "Descricao";
+            this.Descricao.ReadOnly = true;
+            this.Descricao.Width = 250;
+            // 
+            // Categoria
+            // 
+            this.Categoria.DataPropertyName = "categoria";
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            this.Categoria.Width = 200;
+            // 
+            // Apresentacao
+            // 
+            this.Apresentacao.DataPropertyName = "apresentacao";
+            this.Apresentacao.HeaderText = "Apresentação";
+            this.Apresentacao.Name = "Apresentacao";
+            this.Apresentacao.ReadOnly = true;
+            this.Apresentacao.Width = 200;
             // 
             // lblTotal
             // 
@@ -259,6 +305,20 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Apresentação";
             // 
+            // btnBuscarCategoria
+            // 
+            this.btnBuscarCategoria.BackColor = System.Drawing.Color.White;
+            this.btnBuscarCategoria.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarCategoria.BackgroundImage")));
+            this.btnBuscarCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarCategoria.Location = new System.Drawing.Point(937, 51);
+            this.btnBuscarCategoria.Name = "btnBuscarCategoria";
+            this.btnBuscarCategoria.Size = new System.Drawing.Size(29, 29);
+            this.btnBuscarCategoria.TabIndex = 18;
+            this.btnBuscarCategoria.UseVisualStyleBackColor = false;
+            this.btnBuscarCategoria.Click += new System.EventHandler(this.btnBuscarCategoria_Click);
+            // 
             // txtCategoria
             // 
             this.txtCategoria.Location = new System.Drawing.Point(737, 51);
@@ -281,6 +341,40 @@
             this.label7.Size = new System.Drawing.Size(81, 21);
             this.label7.TabIndex = 15;
             this.label7.Text = "Categoria";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.Location = new System.Drawing.Point(916, 227);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(55, 55);
+            this.btnLimpar.TabIndex = 14;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnCarregar
+            // 
+            this.btnCarregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCarregar.BackgroundImage")));
+            this.btnCarregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCarregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCarregar.Location = new System.Drawing.Point(916, 159);
+            this.btnCarregar.Name = "btnCarregar";
+            this.btnCarregar.Size = new System.Drawing.Size(55, 55);
+            this.btnCarregar.TabIndex = 13;
+            this.btnCarregar.UseVisualStyleBackColor = true;
+            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
+            // 
+            // pxImagem
+            // 
+            this.pxImagem.BackgroundImage = global::CamadaApresentacao.Properties.Resources.semImagem;
+            this.pxImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pxImagem.Location = new System.Drawing.Point(756, 159);
+            this.pxImagem.Name = "pxImagem";
+            this.pxImagem.Size = new System.Drawing.Size(143, 123);
+            this.pxImagem.TabIndex = 12;
+            this.pxImagem.TabStop = false;
             // 
             // txtCodigo
             // 
@@ -408,100 +502,6 @@
             // 
             this.ttMensagem.IsBalloon = true;
             // 
-            // btnBuscarCategoria
-            // 
-            this.btnBuscarCategoria.BackColor = System.Drawing.Color.White;
-            this.btnBuscarCategoria.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarCategoria.BackgroundImage")));
-            this.btnBuscarCategoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarCategoria.Location = new System.Drawing.Point(937, 51);
-            this.btnBuscarCategoria.Name = "btnBuscarCategoria";
-            this.btnBuscarCategoria.Size = new System.Drawing.Size(29, 29);
-            this.btnBuscarCategoria.TabIndex = 18;
-            this.btnBuscarCategoria.UseVisualStyleBackColor = false;
-            this.btnBuscarCategoria.Click += new System.EventHandler(this.btnBuscarCategoria_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpar.Location = new System.Drawing.Point(916, 227);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(55, 55);
-            this.btnLimpar.TabIndex = 14;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // btnCarregar
-            // 
-            this.btnCarregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCarregar.BackgroundImage")));
-            this.btnCarregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCarregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCarregar.Location = new System.Drawing.Point(916, 159);
-            this.btnCarregar.Name = "btnCarregar";
-            this.btnCarregar.Size = new System.Drawing.Size(55, 55);
-            this.btnCarregar.TabIndex = 13;
-            this.btnCarregar.UseVisualStyleBackColor = true;
-            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
-            // 
-            // pxImagem
-            // 
-            this.pxImagem.BackgroundImage = global::CamadaApresentacao.Properties.Resources.semImagem;
-            this.pxImagem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pxImagem.Location = new System.Drawing.Point(756, 159);
-            this.pxImagem.Name = "pxImagem";
-            this.pxImagem.Size = new System.Drawing.Size(143, 123);
-            this.pxImagem.TabIndex = 12;
-            this.pxImagem.TabStop = false;
-            // 
-            // Deletar
-            // 
-            this.Deletar.HeaderText = "Deletar";
-            this.Deletar.Name = "Deletar";
-            this.Deletar.ReadOnly = true;
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "codigo";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 200;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 250;
-            // 
-            // Descricao
-            // 
-            this.Descricao.DataPropertyName = "descricao";
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.ReadOnly = true;
-            this.Descricao.Width = 250;
-            // 
-            // Categoria
-            // 
-            this.Categoria.DataPropertyName = "categoria";
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            this.Categoria.Width = 200;
-            // 
-            // Apresentacao
-            // 
-            this.Apresentacao.DataPropertyName = "apresentacao";
-            this.Apresentacao.HeaderText = "Apresentação";
-            this.Apresentacao.Name = "Apresentacao";
-            this.Apresentacao.ReadOnly = true;
-            this.Apresentacao.Width = 200;
-            // 
             // frmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,8 +522,8 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pxImagem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

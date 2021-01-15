@@ -825,7 +825,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.BackColor = System.Drawing.Color.White;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblHora.ForeColor = System.Drawing.Color.Navy;
             this.lblHora.Location = new System.Drawing.Point(625, 447);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(96, 37);

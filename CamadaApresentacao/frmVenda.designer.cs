@@ -87,20 +87,6 @@
             this.errorIcone = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.ttMensagem = new System.Windows.Forms.ToolTip(this.components);
-            this.Deletar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Funcionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_Comprovante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correlativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iddetalhe_entrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Preco_Venda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desconto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -331,7 +317,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1104, 475);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Vendas";
+            this.tabPage2.Text = "Venda";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -393,13 +379,6 @@
             this.dataListaDetalhes.AllowUserToAddRows = false;
             this.dataListaDetalhes.AllowUserToDeleteRows = false;
             this.dataListaDetalhes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataListaDetalhes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iddetalhe_entrada,
-            this.Produto,
-            this.Quantidade,
-            this.Preco_Venda,
-            this.Desconto,
-            this.Subtotal});
             this.dataListaDetalhes.Location = new System.Drawing.Point(6, 256);
             this.dataListaDetalhes.Name = "dataListaDetalhes";
             this.dataListaDetalhes.Size = new System.Drawing.Size(1076, 154);
@@ -434,6 +413,7 @@
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(45, 29);
             this.txtSerie.TabIndex = 25;
+            this.txtSerie.TextChanged += new System.EventHandler(this.txtSerie_TextChanged);
             // 
             // label11
             // 
@@ -540,8 +520,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 45);
             this.tabControl1.Name = "tabControl1";
@@ -611,15 +591,6 @@
             this.dataLista.AllowUserToDeleteRows = false;
             this.dataLista.AllowUserToOrderColumns = true;
             this.dataLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Deletar,
-            this.Funcionario,
-            this.Cliente,
-            this.Data,
-            this.Tipo_Comprovante,
-            this.Serie,
-            this.Correlativo,
-            this.Total});
             this.dataLista.Location = new System.Drawing.Point(8, 136);
             this.dataLista.MultiSelect = false;
             this.dataLista.Name = "dataLista";
@@ -696,106 +667,6 @@
             // ttMensagem
             // 
             this.ttMensagem.IsBalloon = true;
-            // 
-            // Deletar
-            // 
-            this.Deletar.HeaderText = "Deletar";
-            this.Deletar.Name = "Deletar";
-            this.Deletar.ReadOnly = true;
-            // 
-            // Funcionario
-            // 
-            this.Funcionario.DataPropertyName = "funcionario";
-            this.Funcionario.HeaderText = "Funcionario";
-            this.Funcionario.Name = "Funcionario";
-            this.Funcionario.ReadOnly = true;
-            this.Funcionario.Width = 200;
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "cliente";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            this.Cliente.Width = 200;
-            // 
-            // Data
-            // 
-            this.Data.DataPropertyName = "data";
-            this.Data.HeaderText = "Data";
-            this.Data.Name = "Data";
-            this.Data.ReadOnly = true;
-            // 
-            // Tipo_Comprovante
-            // 
-            this.Tipo_Comprovante.DataPropertyName = "tipo_comprovante";
-            this.Tipo_Comprovante.HeaderText = "Tipo Comprovante";
-            this.Tipo_Comprovante.Name = "Tipo_Comprovante";
-            this.Tipo_Comprovante.ReadOnly = true;
-            this.Tipo_Comprovante.Width = 200;
-            // 
-            // Serie
-            // 
-            this.Serie.DataPropertyName = "serie";
-            this.Serie.HeaderText = "Série";
-            this.Serie.Name = "Serie";
-            this.Serie.ReadOnly = true;
-            // 
-            // Correlativo
-            // 
-            this.Correlativo.DataPropertyName = "correlativo";
-            this.Correlativo.HeaderText = "Correlativo";
-            this.Correlativo.Name = "Correlativo";
-            this.Correlativo.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.DataPropertyName = "total";
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 150;
-            // 
-            // iddetalhe_entrada
-            // 
-            this.iddetalhe_entrada.DataPropertyName = "iddetalhe_entrada";
-            this.iddetalhe_entrada.HeaderText = "ID Detalhe Entrada";
-            this.iddetalhe_entrada.Name = "iddetalhe_entrada";
-            this.iddetalhe_entrada.Width = 200;
-            // 
-            // Produto
-            // 
-            this.Produto.DataPropertyName = "produto";
-            this.Produto.HeaderText = "Produto";
-            this.Produto.Name = "Produto";
-            this.Produto.Width = 200;
-            // 
-            // Quantidade
-            // 
-            this.Quantidade.HeaderText = "Quantidade";
-            this.Quantidade.Name = "Quantidade";
-            this.Quantidade.Width = 150;
-            // 
-            // Preco_Venda
-            // 
-            this.Preco_Venda.DataPropertyName = "preco_venda";
-            this.Preco_Venda.HeaderText = "Preço Venda";
-            this.Preco_Venda.Name = "Preco_Venda";
-            this.Preco_Venda.Width = 200;
-            // 
-            // Desconto
-            // 
-            this.Desconto.DataPropertyName = "desconto";
-            this.Desconto.HeaderText = "Desconto";
-            this.Desconto.Name = "Desconto";
-            this.Desconto.Width = 150;
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.DataPropertyName = "subtotal";
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.Name = "Subtotal";
-            this.Subtotal.Width = 150;
             // 
             // frmVenda
             // 
@@ -885,19 +756,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip ttMensagem;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Deletar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Funcionario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Data;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Comprovante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correlativo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iddetalhe_entrada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Produto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Preco_Venda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desconto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
     }
 }

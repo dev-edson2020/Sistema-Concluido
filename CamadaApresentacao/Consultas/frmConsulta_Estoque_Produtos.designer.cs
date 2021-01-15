@@ -51,11 +51,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(18, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 25);
+            this.label1.Size = new System.Drawing.Size(232, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Estoque de Produtos";
             // 
@@ -65,9 +66,10 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(632, 11);
+            this.btnImprimir.Location = new System.Drawing.Point(948, 18);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnImprimir.Size = new System.Drawing.Size(112, 37);
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
@@ -75,10 +77,11 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(12, 45);
+            this.tabControl1.Location = new System.Drawing.Point(18, 73);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(721, 357);
+            this.tabControl1.Size = new System.Drawing.Size(1082, 476);
             this.tabControl1.TabIndex = 7;
             // 
             // tabPage1
@@ -86,10 +89,11 @@
             this.tabPage1.Controls.Add(this.dataLista);
             this.tabPage1.Controls.Add(this.lblTotal);
             this.tabPage1.Controls.Add(this.btnImprimir);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(713, 331);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Size = new System.Drawing.Size(1074, 442);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listar";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -102,12 +106,13 @@
             this.dataLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Deletar});
-            this.dataLista.Location = new System.Drawing.Point(10, 45);
+            this.dataLista.Location = new System.Drawing.Point(15, 73);
+            this.dataLista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataLista.MultiSelect = false;
             this.dataLista.Name = "dataLista";
             this.dataLista.ReadOnly = true;
             this.dataLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataLista.Size = new System.Drawing.Size(697, 280);
+            this.dataLista.Size = new System.Drawing.Size(1046, 359);
             this.dataLista.TabIndex = 6;
             // 
             // Deletar
@@ -119,21 +124,25 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(16, 21);
+            this.lblTotal.Location = new System.Drawing.Point(11, 34);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(35, 13);
+            this.lblTotal.Size = new System.Drawing.Size(54, 21);
             this.lblTotal.TabIndex = 5;
             this.lblTotal.Text = "label3";
             // 
             // frmConsulta_Estoque_Produtos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(745, 406);
+            this.ClientSize = new System.Drawing.Size(1118, 560);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmConsulta_Estoque_Produtos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Estoque";
             this.Load += new System.EventHandler(this.frmConsulta_Estoque_Produtos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorIcone)).EndInit();
